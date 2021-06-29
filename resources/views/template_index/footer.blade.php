@@ -1,4 +1,3 @@
-
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-newsletter">
