@@ -14,7 +14,10 @@ class CreatePembimbingsTable extends Migration
     public function up()
     {
         Schema::create('pembimbings', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_pembimbing')->unsigned();
+            $table->string('nama_pembimbing');
+            $table->string('ket_pembimbing');
+            $table->string('foto_pembimbing');
             $table->timestamps();
         });
     }

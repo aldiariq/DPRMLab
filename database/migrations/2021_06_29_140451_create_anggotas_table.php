@@ -14,7 +14,11 @@ class CreateAnggotasTable extends Migration
     public function up()
     {
         Schema::create('anggotas', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_anggota')->unsigned();
+            $table->string('nim_anggota');
+            $table->string('nama_anggota');
+            $table->string('ket_anggota');
+            $table->string('foto_anggota');
             $table->timestamps();
         });
     }

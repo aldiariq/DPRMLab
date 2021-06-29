@@ -14,7 +14,13 @@ class CreatePenelitiansTable extends Migration
     public function up()
     {
         Schema::create('penelitians', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_penelitian')->unsigned();
+            $table->string('judul_penelitian');
+            $table->string('nama_penelitian');
+            $table->date('tanggal_penelitian');
+            $table->enum('status_penelitian', ['SELESAI', 'BELUMSELESAI']);
+            $table->string('penjelasan_penelitian');
+            $table->string('foto_penelitian');
             $table->timestamps();
         });
     }

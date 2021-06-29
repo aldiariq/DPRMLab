@@ -14,7 +14,9 @@ class CreateSaranmasukansTable extends Migration
     public function up()
     {
         Schema::create('saranmasukans', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_saranmasukan')->unsigned();
+            $table->string('isi_saranmasukan');
+            $table->date('tanggal_saranmasukan');
             $table->timestamps();
         });
     }
