@@ -6,19 +6,19 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo mt-3 ">
-        <a href="index.html"><img src="assets/img/logoutama.png" alt="" class="img-fluid mb-2"></a>
+        <a href="{{ url('/') }}"><img src="assets/img/logoutama.png" alt="" class="img-fluid mb-2"></a>
         <!-- <h1><a href="index.html" class="fw-bold">DPRMLab</a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
       </div>
 
       <nav id="navbar" class="navbar fw-bold">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Halaman Utama</a></li>
+          <li><a class="nav-link scrollto active" href="{{ url('/') }}">Halaman Utama</a></li>
           <li><a class="nav-link scrollto" href="#dosenpembimbing">Dosen Pembimbing</a></li>
           <li><a class="nav-link scrollto" href="#penelitiankami">Penelitian Kami</a></li>
           <li><a class="nav-link scrollto" href="#anggotakami">Anggota Kami</a></li>
           <li><a class="nav-link scrollto" href="#jadwalbimbingan">Jadwal Bimbingan</a></li>
-          <li><a class="getstarted scrollto" href="#">Halaman Admin</a></li>
+          <li><a class="getstarted scrollto" href="{{ url('/login') }}">Halaman Admin</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
