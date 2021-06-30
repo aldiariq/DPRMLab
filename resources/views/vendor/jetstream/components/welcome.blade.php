@@ -29,7 +29,7 @@
                 Halaman pada menu ini berfungsi untuk mengelola pembimbing penelitian mulai dari melihat, menambah, mengubah dan menghapus data pembimbing.
             </div>
 
-            <a href="https://laravel.com/docs">
+            <a href="{{ url('/pembimbing') }}">
                 <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
                     <div>Menuju Menu</div>
 
@@ -56,7 +56,7 @@
                 Halaman pada menu ini berfungsi untuk mengelola penelitian penelitian mulai dari melihat, menambah, mengubah dan menghapus data penelitian.
             </div>
 
-            <a href="https://laracasts.com">
+            <a href="{{ url('/penelitian') }}">
                 <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
                     <div>Menuju Menu</div>
 
@@ -83,7 +83,7 @@
                 Halaman pada menu ini berfungsi untuk mengelola anggota mulai dari melihat, menambah, mengubah dan menghapus data anggota.
             </div>
 
-            <a href="https://laracasts.com">
+            <a href="{{ url('/anggota') }}">
                 <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
                     <div>Menuju Menu</div>
 
@@ -110,7 +110,7 @@
                 Halaman pada menu ini berfungsi untuk mengelola jadwal bimbingan mulai dari melihat, menambah, mengubah dan menghapus data jadwal bimbingan.
             </div>
 
-            <a href="https://laracasts.com">
+            <a href="{{ url('/bimbingan') }}">
                 <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
                     <div>Menuju Menu</div>
 
@@ -139,7 +139,7 @@
                 Halaman pada menu ini berfungsi untuk melihat saran atau masukan dari pengunjung.
             </div>
 
-            <a href="https://laravel.com/docs">
+            <a href="{{ url('/saranmasukan') }}">
                 <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
                     <div>Menuju Menu</div>
 
