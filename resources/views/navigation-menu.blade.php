@@ -16,6 +16,36 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('pembimbing.index') }}" :active="request()->routeIs('pembimbing.index')">
+                        {{ __('Dosen Pembimbing') }}
+                    </x-jet-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('penelitian.index') }}" :active="request()->routeIs('penelitian.index')">
+                        {{ __('Penelitian Kami') }}
+                    </x-jet-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('anggota.index') }}" :active="request()->routeIs('anggota.index')">
+                        {{ __('Anggota Kami') }}
+                    </x-jet-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('bimbingan.index') }}" :active="request()->routeIs('bimbingan.index')">
+                        {{ __('Jadwal Bimbingan') }}
+                    </x-jet-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('saranmasukan.index') }}" :active="request()->routeIs('saranmasukan.index')">
+                        {{ __('Saran atau Masukan') }}
+                    </x-jet-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
