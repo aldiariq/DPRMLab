@@ -2,11 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
-use App\Http\Controllers\PembimbingController;
-use App\Http\Controllers\PenelitianController;
-use App\Http\Controllers\AnggotaController;
-use App\Http\Controllers\BimbinganController;
-use App\Http\Controllers\SaranmasukanController;
+
+use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\Pembimbing;
+use App\Http\Livewire\Penelitian;
+use App\Http\Livewire\Anggota;
+use App\Http\Livewire\Bimbingan;
+use App\Http\Livewire\Saranmasukan;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +23,11 @@ use App\Http\Controllers\SaranmasukanController;
 
 Route::get('/', [IndexController::class, 'index']);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
-Route::resource('pembimbing', PembimbingController::class);
-Route::resource('penelitian', PenelitianController::class);
-Route::resource('anggota', AnggotaController::class);
-Route::resource('bimbingan', BimbinganController::class);
-Route::resource('saranmasukan', SaranmasukanController::class);
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    Route::get('/pembimbing', Pembimbing::class)->name('pembimbing');
+    Route::get('/penelitian', Penelitian::class)->name('penelitian');
+    Route::get('/anggota', Anggota::class)->name('anggota');
+    Route::get('/bimbingan', Bimbingan::class)->name('bimbingan');
+    Route::get('/saranmasukan', Saranmasukan::class)->name('saranmasukan');
+});
