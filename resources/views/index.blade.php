@@ -1,4 +1,5 @@
 @include('template_index.header')
+
 <body>
 
   <!-- ======= Header ======= -->
@@ -18,7 +19,15 @@
           <li><a class="nav-link scrollto" href="#penelitiankami">Penelitian Kami</a></li>
           <li><a class="nav-link scrollto" href="#anggotakami">Anggota Kami</a></li>
           <li><a class="nav-link scrollto" href="#jadwalbimbingan">Jadwal Bimbingan</a></li>
-          <li><a class="getstarted scrollto" href="{{ url('/login') }}">Halaman Admin</a></li>
+          @if (Route::has('login'))
+          <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+            @auth
+            <li><a class="getstarted scrollto" href="{{ url('/dashboard') }}">Halaman Dashboard</a></li>
+            @else
+            <li><a class="getstarted scrollto" href="{{ url('/login') }}">Halaman Login</a></li>
+            @endauth
+          </div>
+          @endif
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -256,4 +265,4 @@
 
   </main><!-- End #main -->
 
-@include('template_index.footer')
+  @include('template_index.footer')
