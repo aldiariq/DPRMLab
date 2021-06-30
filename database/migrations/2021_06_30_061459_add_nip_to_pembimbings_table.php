@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddKetBimbinganToBimbingansTable extends Migration
+class AddNipToPembimbingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddKetBimbinganToBimbingansTable extends Migration
      */
     public function up()
     {
-        Schema::table('bimbingans', function (Blueprint $table) {
-            $table->string('ket_bimbingan')->after('tanggal_bimbingan');
+        Schema::table('pembimbings', function (Blueprint $table) {
+            $table->string('nip_pembimbing')->after('id_pembimbing');
         });
     }
 
@@ -25,8 +25,8 @@ class AddKetBimbinganToBimbingansTable extends Migration
      */
     public function down()
     {
-        Schema::table('bimbingans', function (Blueprint $table) {
-            $table->dropColumn('ket_bimbingan');
+        Schema::table('pembimbings', function (Blueprint $table) {
+            $table->dropColumn('nip_pembimbing');
         });
     }
 }
