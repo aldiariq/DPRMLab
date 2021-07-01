@@ -130,7 +130,6 @@
             <h3>Judul Penelitian.</h3>
             <p><i class="bi bi-people"></i> Nama Peneliti</p>
             <p><i class="bi bi-calendar-date"></i> Tanggal Penelitian</p>
-            <p><i class="bi bi-layout-sidebar"></i> Status penelitian</p>
             <p><i class="bi bi-card-heading"></i> Penjelasan singkat penelitian</p>
           </div>
         </div>
@@ -143,7 +142,6 @@
             <h3>Judul Penelitian.</h3>
             <p><i class="bi bi-people"></i> Nama Peneliti</p>
             <p><i class="bi bi-calendar-date"></i> Tanggal Penelitian</p>
-            <p><i class="bi bi-layout-sidebar"></i> Status penelitian</p>
             <p><i class="bi bi-card-heading"></i> Penjelasan singkat penelitian</p>
           </div>
         </div>
@@ -165,7 +163,6 @@
                             <h3>Judul Penelitian.</h3>
                             <p><i class="bi bi-people"></i> Nama Peneliti</p>
                             <p><i class="bi bi-calendar-date"></i> Tanggal Penelitian</p>
-                            <p><i class="bi bi-layout-sidebar"></i> Status penelitian</p>
                             <p><i class="bi bi-card-heading"></i> Penjelasan singkat penelitian</p>
                           </div>
                         </div>
@@ -178,7 +175,6 @@
                             <h3>Judul Penelitian.</h3>
                             <p><i class="bi bi-people"></i> Nama Peneliti</p>
                             <p><i class="bi bi-calendar-date"></i> Tanggal Penelitian</p>
-                            <p><i class="bi bi-layout-sidebar"></i> Status penelitian</p>
                             <p><i class="bi bi-card-heading"></i> Penjelasan singkat penelitian</p>
                           </div>
                         </div>
@@ -188,7 +184,6 @@
                 </li>
               </ul>
             </div>
-
           </div>
         </section>
       </div>
