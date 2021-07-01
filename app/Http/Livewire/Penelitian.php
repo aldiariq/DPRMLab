@@ -33,6 +33,8 @@ class Penelitian extends Component
         $this->modal = false;
         $this->modaldelete = false;
         $this->resetInput();
+        $this->resetErrorBag();
+        $this->resetValidation();
     }
 
     public function resetInput()
@@ -50,7 +52,7 @@ class Penelitian extends Component
     public function store()
     {
         $imageValidation = '';
-        if ($this->foto_penelitian != $this->old_foto_penelitian) {
+        if ($this->old_foto_penelitian == null) {
             $imageValidation = "required|image|mimes:jpg,jpeg,png|max:1024";
         }
 

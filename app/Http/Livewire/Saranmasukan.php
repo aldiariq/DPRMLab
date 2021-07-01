@@ -27,6 +27,8 @@ class Saranmasukan extends Component
     {
         $this->modaldelete = false;
         $this->resetInput();
+        $this->resetErrorBag();
+        $this->resetValidation();
     }
 
     public function resetInput()

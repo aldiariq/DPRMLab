@@ -33,6 +33,8 @@ class Anggota extends Component
         $this->modal = false;
         $this->modaldelete = false;
         $this->resetInput();
+        $this->resetErrorBag();
+        $this->resetValidation();
     }
 
     public function resetInput()
@@ -48,7 +50,7 @@ class Anggota extends Component
     public function store()
     {
         $imageValidation = '';
-        if ($this->foto_anggota != $this->old_foto_anggota) {
+        if ($this->old_foto_anggota == null) {
             $imageValidation = "required|image|mimes:jpg,jpeg,png|max:1024";
         }
 

@@ -33,6 +33,8 @@ class Pembimbing extends Component
         $this->modal = false;
         $this->modaldelete = false;
         $this->resetInput();
+        $this->resetErrorBag();
+        $this->resetValidation();
     }
 
     public function resetInput()
@@ -48,7 +50,7 @@ class Pembimbing extends Component
     public function store()
     {
         $imageValidation = '';
-        if ($this->foto_pembimbing != $this->old_foto_pembimbing) {
+        if ($this->old_foto_pembimbing == null) {
             $imageValidation = "required|image|mimes:jpg,jpeg,png|max:1024";
         }
 

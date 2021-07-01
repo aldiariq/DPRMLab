@@ -44,6 +44,8 @@ class Bimbingan extends Component
         $this->modal = false;
         $this->modaldelete = false;
         $this->resetInput();
+        $this->resetErrorBag();
+        $this->resetValidation();
     }
 
     public function resetInput()
