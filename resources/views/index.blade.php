@@ -47,13 +47,13 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="row">
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 mt-3">
                     <a href="#" class="download-btn"><i class="bx bx-book"></i> Data Science</a>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 mt-3">
                     <a href="#" class="download-btn"><i class="bx bx-message-alt-dots"></i> Machine Learning</a>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 mt-3">
                     <a href="#" class="download-btn"><i class="bx bx-lock"></i> Cryptography</a>
                   </div>
                 </div>

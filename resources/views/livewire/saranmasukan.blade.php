@@ -40,8 +40,8 @@
             <div class="bg-white overflow-hidden sm:rounded-lg">
                 <div class="min-w-screen justify-center min-h-screen bg-gray-100 flex justify-center bg-gray-100 font-sans overflow-hidden">
 
-                    <div class="w-full lg:w-5/6">
-                        <div class="bg-white shadow-md rounded my-6">
+                    <div class="w-full lg:w-5/6 px-2">
+                        <div class="bg-white shadow-md rounded my-6 overflow-x-scroll">
                             <table class="min-w-max w-full table-auto">
                                 <thead>
                                     <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">

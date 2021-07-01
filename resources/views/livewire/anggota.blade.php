@@ -44,13 +44,13 @@
             <div class="bg-white overflow-hidden sm:rounded-lg">
                 <div class="min-w-screen justify-center min-h-screen bg-gray-100 flex justify-center bg-gray-100 font-sans overflow-hidden">
 
-                    <div class="w-full lg:w-5/6">
+                    <div class="w-full lg:w-5/6 px-2">
                         <button wire:click="showModal()" class="w-full h-10 px-6 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
                             <h2 class="font-semibold text-sm text-white-800 leading-tight">
                                 {{ __('Tambah Anggota') }}
                             </h2>
                         </button>
-                        <div class="bg-white shadow-md rounded my-6">
+                        <div class="bg-white shadow-md rounded my-6 overflow-x-scroll">
                             <table class="min-w-max w-full table-auto">
                                 <thead>
                                     <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
