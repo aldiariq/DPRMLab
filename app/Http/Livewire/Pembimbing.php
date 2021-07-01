@@ -17,7 +17,7 @@ class Pembimbing extends Component
 
     public function render()
     {
-        $pembimbing = PembimbingModel::latest()->simplePaginate(10);
+        $pembimbing = PembimbingModel::oldest()->simplePaginate(10);
         return view('livewire.pembimbing', [
             'pembimbing' => $pembimbing
         ]);
@@ -42,6 +42,7 @@ class Pembimbing extends Component
         $this->nama_pembimbing = "";
         $this->ket_pembimbing = "";
         $this->foto_pembimbing = null;
+        $this->old_foto_pembimbing = null;
     }
 
     public function store()
