@@ -54,8 +54,8 @@
                             <table class="min-w-max w-full table-auto">
                                 <thead>
                                     <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                                        <th class="py-3 px-6 text-left">Nama Anggota</th>
-                                        <th class="py-3 px-6 text-left">Tanggal Bimbingan</th>
+                                        <th class="py-3 px-6 text-left">Nama</th>
+                                        <th class="py-3 px-6 text-left">Tanggal</th>
                                         <th class="py-3 px-6 text-center">Keterangan</th>
                                         <th class="py-3 px-6 text-center">Aksi</th>
                                     </tr>
