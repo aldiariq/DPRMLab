@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 
+use App\Http\Livewire\Index;
 use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Pembimbing;
 use App\Http\Livewire\Penelitian;
@@ -21,7 +22,7 @@ use App\Http\Livewire\Saranmasukan;
 |
 */
 
-Route::get('/', [IndexController::class, 'index']);
+Route::get('/', Index::class)->name('index');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');

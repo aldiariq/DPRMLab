@@ -22,7 +22,7 @@ class Bimbingan extends Component
         $bimbingan = BimbinganModel::join('anggotas', 'anggotas.id_anggota', '=', 'bimbingans.id_anggota')
             ->select('bimbingans.*', 'anggotas.id_anggota', 'anggotas.nama_anggota')
             ->groupBy('bimbingans.id_bimbingan')
-            ->orderBy('created_at', 'DESC')->simplePaginate(10);
+            ->orderBy('bimbingans.tanggal_bimbingan', 'DESC')->simplePaginate(10);
 
         $anggota = AnggotaModel::all();
 

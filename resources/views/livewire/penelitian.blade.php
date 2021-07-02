@@ -68,7 +68,7 @@
                                     <tr class="border-b border-gray-200 hover:bg-gray-100">
                                         <td class="py-3 px-6 text-left whitespace-nowrap">
                                             <div class="flex items-center">
-                                                <span class="font-medium">{{ $data->judul_penelitian }}</span>
+                                                <span class="font-medium ">{{ $data->judul_penelitian }}</span>
                                             </div>
                                         </td>
                                         <td class="py-3 px-6 text-left">

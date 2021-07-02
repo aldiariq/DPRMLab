@@ -1,13 +1,14 @@
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="saranmasukan">
     <div class="footer-newsletter">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <h4>Saran atau Masukan</h4>
             <p>Silahkan kirim saran atau masukan Anda demi kemajuan grup riset kami.</p>
-            <form action="" method="post">
-              <input type="text" name="saranataumasukan"><input type="submit" value="Kirim">
+            <form>
+              <input type="text" name="saranataumasukan" id="isi_saranmasukan" wire:model="isi_saranmasukan">
+              <input wire:click.prevent="store()" type="submit" value="Kirim">
             </form>
           </div>
         </div>
@@ -61,13 +62,14 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/ -->
-        Web Template Inspired by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Web Template Inspired by Appland at <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  @livewireScripts
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -77,7 +79,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  </body>
 
-</body>
-
-</html>
+  </html>
