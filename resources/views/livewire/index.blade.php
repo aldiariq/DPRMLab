@@ -16,7 +16,13 @@
                     <ul>
                         <li><a class="nav-link scrollto active" href="{{ url('/') }}">Halaman Utama</a></li>
                         <li><a class="nav-link scrollto" href="#dosenpembimbing">Dosen Pembimbing</a></li>
-                        <li><a class="nav-link scrollto" href="#penelitiankami">Penelitian Kami</a></li>
+                        <li class="dropdown"><a href="#"><span>Penelitian Kami</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a class="nav-link scrollto" href="#penelitiankami">Daftar Penelitian Kami</a></li>
+                                <li><a href="#">Publikasi Jurnal Penelitian</a></li>
+                                <li><a href="#">Dokumentasi Penelitian</a></li>
+                            </ul>
+                        </li>
                         <li><a class="nav-link scrollto" href="#anggotakami">Anggota Kami</a></li>
                         <li><a class="nav-link scrollto" href="#jadwalbimbingan">Jadwal Bimbingan</a></li>
                         <li><a class="nav-link scrollto" href="#saranmasukan">Saran atau Masukan</a></li>
@@ -45,24 +51,6 @@
 
             </div>
         </header><!-- End Header -->
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- ======= Hero Section ======= -->
         <section id="hero" class="d-flex align-items-center">
@@ -241,7 +229,7 @@
 
             <!-- ======= Jadwal Bimbingan Section ======= -->
             <section id="jadwalbimbingan" class="faq">
-                <div class="container" data-aos="fade-up">
+                <div class="container">
                     <div class="section-title">
                         <h2>Jadwal Bimbingan</h2>
                         <p>Berikut Jadwal Bimbingan yang Akan Datang pada Grup Riset Kami.</p>
