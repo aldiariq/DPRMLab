@@ -9,7 +9,7 @@ class DemoDokumentasiPenelitian extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'id_demo_dokumentasi_penelitians';
+    protected $primaryKey = 'id_demo_dokumentasi_penelitian';
 
-    protected $fillable = ['id_penelitian', 'ket_demo_dokumentasi_penelitians', 'linkvideo_demo_dokumentasi_penelitians'];
+    protected $fillable = ['id_penelitian', 'ket_demo_dokumentasi_penelitian', 'linkvideo_demo_dokumentasi_penelitian'];
 }
