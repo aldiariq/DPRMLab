@@ -44,10 +44,10 @@
                             <x-jet-dropdown-link href="{{ route('penelitian') }}">
                                 {{ __('Daftar Penelitian') }}
                             </x-jet-dropdown-link>
-                            <x-jet-dropdown-link href="{{ route('penelitian') }}">
+                            <x-jet-dropdown-link href="{{ route('publikasipenelitian') }}">
                                 {{ __('Publikasi Penelitian/Jurnal') }}
                             </x-jet-dropdown-link>
-                            <x-jet-dropdown-link href="{{ route('penelitian') }}">
+                            <x-jet-dropdown-link href="{{ route('demodokumentasipenelitian') }}">
                                 {{ __('Demo/Dokumentasi Penelitian') }}
                             </x-jet-dropdown-link>
                         </x-slot>

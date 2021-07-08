@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\PublikasiPenelitian as PublikasiPenelitianModel;
+use App\Models\Penelitian as PenelitianModel;
 use Livewire\WithPagination;
 use Livewire\WithFileUploads;
 
@@ -17,9 +18,14 @@ class PublikasiPenelitian extends Component
 
     public function render()
     {
-        $publikasi_penelitian = PublikasiPenelitianModel::latest()->simplePaginate(10);
+        $publikasi_penelitian = PublikasiPenelitianModel::join('penelitians', 'penelitians.id_penelitian', '=', 'publikasi_penelitians.id_penelitian')
+            ->select('publikasi_penelitians.*', 'penelitians.id_penelitian', 'penelitians.judul_penelitian', 'penelitians.nama_penelitian')
+            ->groupBy('publikasi_penelitians.id_publikasi_penelitian')->simplePaginate(10);
+
+        $penelitian = PenelitianModel::all();
         return view('livewire.publikasi-penelitian', [
-            'publikasi_penelitian' => $publikasi_penelitian
+            'publikasi_penelitian' => $publikasi_penelitian,
+            'penelitian' => $penelitian
         ]);
     }
 
