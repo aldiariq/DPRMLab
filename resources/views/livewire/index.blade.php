@@ -16,11 +16,11 @@
                     <ul>
                         <li><a class="nav-link scrollto active" href="{{ url('/') }}">Halaman Utama</a></li>
                         <li><a class="nav-link scrollto" href="#dosenpembimbing">Dosen Pembimbing</a></li>
-                        <li class="dropdown"><a href="#"><span>Penelitian Kami</span> <i class="bi bi-chevron-down"></i></a>
+                        <li class="dropdown"><a class="nav-link scrollto" href="#penelitian"><span>Penelitian Kami</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
-                                <li><a class="nav-link scrollto" href="#penelitiankami">Daftar Penelitian Kami</a></li>
-                                <li><a href="#">Publikasi Jurnal Penelitian</a></li>
-                                <li><a href="#">Dokumentasi Penelitian</a></li>
+                                <li><a class="nav-link scrollto" href="#penelitian">Daftar Penelitian</a></li>
+                                <li><a class="nav-link scrollto" href="#publikasipenelitian">Publikasi Jurnal Penelitian</a></li>
+                                <li><a class="nav-link scrollto" href="#demodokumentasipenelitian">Demo/Dokumentasi Penelitian</a></li>
                             </ul>
                         </li>
                         <li><a class="nav-link scrollto" href="#anggotakami">Anggota Kami</a></li>
@@ -119,7 +119,7 @@
             </section><!-- End Dosen Pembimbing Section -->
 
             <!-- ======= Penelitian Section ======= -->
-            <section id="penelitiankami" class="details">
+            <section id="penelitian" class="details">
                 <div class="container">
 
                     <div class="section-title">
@@ -194,6 +194,172 @@
                         </section>
                     </div>
             </section><!-- End Penelitian Section -->
+
+            <!-- ======= Publikasi Penelitian Section ======= -->
+            <section id="publikasipenelitian" class="details">
+                <div class="container">
+
+                    <div class="section-title">
+                        <h2>Publikasi Penelitian Kami</h2>
+                        <p>Berikut Daftar Publikasi dari Penelitian Yang Telah Kami Laksanakan.</p>
+                    </div>
+
+                    @php
+                    $nomor = 1;
+                    @endphp
+                    @foreach($publikasi_penelitian_terbaru as $data)
+                    <div class="row content">
+                        @if($nomor % 2 == 1)
+                        <div class="col-md-6" data-aos="fade-right">
+                            @else
+                            <div class="col-md-6 order-1 order-md-2" data-aos="fade-left">
+                                @endif
+                                <img src="{{ asset('storage/'.$data->foto_publikasi_penelitian)}}" class="img-fluid img-thumbnail" alt="">
+                            </div>
+                            <div class="col-md-6 pt-4" data-aos="fade-up">
+                                <h3>{{ $data->judul_penelitian }}</h3>
+                                <p><i class="bi bi-people"></i> {{ $data->nama_penelitian }}</p>
+                                <p><i class="bi bi-calendar-date"></i> {{ $data->tanggal_publikasi_penelitian }}</p>
+                                <p><i class="bi bi-geo-alt"></i> {{ $data->tempat_publikasi_penelitian }}</p>
+                                <p><i class="bi bi-card-heading"></i> {{ $data->ket_publikasi_penelitian }}</p>
+                            </div>
+                        </div>
+
+                        @php
+                        $nomor++;
+                        @endphp
+                        @endforeach
+
+                        <section class="faq section-bg mt-5">
+                            <div class="container" data-aos="fade-up">
+                                <div class="accordion-list">
+                                    <ul>
+                                        <li data-aos="fade-up" data-aos-delay="100">
+                                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Lihat Publikasi Penelitian Kami Selengkapnya. <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                            <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                                <section class="details">
+                                                    <div class="container">
+                                                        @php
+                                                        $nomor = 1;
+                                                        @endphp
+                                                        @foreach($publikasi_penelitian as $data)
+                                                        <div class="row content">
+                                                            @if($nomor % 2 == 1)
+                                                            <div class="col-md-6" data-aos="fade-right">
+                                                                @else
+                                                                <div class="col-md-6 order-1 order-md-2" data-aos="fade-left">
+                                                                    @endif
+                                                                    <img src="{{ asset('storage/'.$data->foto_publikasi_penelitian)}}" class="img-fluid img-thumbnail" alt="">
+                                                                </div>
+                                                                <div class="col-md-6 pt-4" data-aos="fade-up">
+                                                                    <h3>{{ $data->judul_penelitian }}</h3>
+                                                                    <p><i class="bi bi-people"></i> {{ $data->nama_penelitian }}</p>
+                                                                    <p><i class="bi bi-calendar-date"></i> {{ $data->tanggal_publikasi_penelitian }}</p>
+                                                                    <p><i class="bi bi-geo-alt"></i> {{ $data->tempat_publikasi_penelitian }}</p>
+                                                                    <p><i class="bi bi-card-heading"></i> {{ $data->ket_publikasi_penelitian }}</p>
+                                                                </div>
+                                                            </div>
+                                                            @php
+                                                            $nomor++;
+                                                            @endphp
+                                                            @endforeach
+                                                        </div>
+                                                </section>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            </section><!-- End Publikasi Penelitian Section -->
+
+            <!-- ======= Demo/Dokumentasi Penelitian Section ======= -->
+            <section id="demodokumentasipenelitian" class="details">
+                <div class="container">
+
+                    <div class="section-title">
+                        <h2>Demo/Dokumentasi Penelitian Kami</h2>
+                        <p>Berikut Daftar Demo/Dokumentasi dari Penelitian Yang Telah Kami Publikasikan.</p>
+                    </div>
+
+                    @php
+                    $nomor = 1;
+                    @endphp
+                    @foreach($demodokumentasi_penelitian_terbaru as $data)
+                    <div class="row content">
+                        @if($nomor % 2 == 1)
+                        <div class="col-md-6" data-aos="fade-right">
+                            @else
+                            <div class="col-md-6 order-1 order-md-2" data-aos="fade-left">
+                                @endif
+                                @php
+                                $url_youtube = $data->linkvideo_demo_dokumentasi_penelitian;
+                                $video_id = explode("?v=", $url_youtube);
+                                @endphp
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/{{ $video_id[1] }}" title="YouTube video" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pt-4" data-aos="fade-up">
+                                <h3>{{ $data->judul_penelitian }}</h3>
+                                <p><i class="bi bi-people"></i> {{ $data->nama_penelitian }}</p>
+                                <p><i class="bi bi-card-heading"></i> {{ $data->ket_demo_dokumentasi_penelitian }}</p>
+                            </div>
+                        </div>
+
+                        @php
+                        $nomor++;
+                        @endphp
+                        @endforeach
+
+                        <section class="faq section-bg mt-5">
+                            <div class="container" data-aos="fade-up">
+                                <div class="accordion-list">
+                                    <ul>
+                                        <li data-aos="fade-up" data-aos-delay="100">
+                                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Lihat Demo/Dokumentasi Penelitian Kami Selengkapnya. <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                            <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                                <section class="details">
+                                                    <div class="container">
+                                                        @php
+                                                        $nomor = 1;
+                                                        @endphp
+                                                        @foreach($demodokumentasi_penelitian as $data)
+                                                        <div class="row content">
+                                                            @if($nomor % 2 == 1)
+                                                            <div class="col-md-6" data-aos="fade-right">
+                                                                @else
+                                                                <div class="col-md-6 order-1 order-md-2" data-aos="fade-left">
+                                                                    @endif
+                                                                    @php
+                                                                    $url_youtube = $data->linkvideo_demo_dokumentasi_penelitian;
+                                                                    $video_id = explode("?v=", $url_youtube);
+                                                                    @endphp
+                                                                    <div class="ratio ratio-16x9">
+                                                                        <iframe src="https://www.youtube.com/embed/{{ $video_id[1] }}" title="YouTube video" allowfullscreen></iframe>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 pt-4" data-aos="fade-up">
+                                                                    <h3>{{ $data->judul_penelitian }}</h3>
+                                                                    <p><i class="bi bi-people"></i> {{ $data->nama_penelitian }}</p>
+                                                                    <p><i class="bi bi-card-heading"></i> {{ $data->ket_demo_dokumentasi_penelitian }}</p>
+                                                                </div>
+                                                            </div>
+                                                            @php
+                                                            $nomor++;
+                                                            @endphp
+                                                            @endforeach
+                                                        </div>
+                                                </section>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            </section><!-- End Demo/Dokumentasi Penelitian Section -->
 
             <!-- ======= Anggota Kami Section ======= -->
             <section id="anggotakami" class="testimonials section-bg">
