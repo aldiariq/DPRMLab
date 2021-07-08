@@ -22,7 +22,7 @@ class PublikasiPenelitian extends Component
             ->select('publikasi_penelitians.*', 'penelitians.id_penelitian', 'penelitians.judul_penelitian', 'penelitians.nama_penelitian')
             ->groupBy('publikasi_penelitians.id_publikasi_penelitian')->simplePaginate(10);
 
-        $penelitian = PenelitianModel::all();
+        $penelitian = PenelitianModel::orderBy('penelitians.nama_penelitian', 'ASC')->get();
         return view('livewire.publikasi-penelitian', [
             'publikasi_penelitian' => $publikasi_penelitian,
             'penelitian' => $penelitian

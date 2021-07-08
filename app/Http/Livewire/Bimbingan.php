@@ -24,7 +24,7 @@ class Bimbingan extends Component
             ->groupBy('bimbingans.id_bimbingan')
             ->orderBy('bimbingans.tanggal_bimbingan', 'DESC')->simplePaginate(10);
 
-        $anggota = AnggotaModel::all();
+        $anggota = AnggotaModel::orderBy('anggotas.nama_anggota', 'ASC')->get();
 
         // dd($anggota);
 

@@ -22,7 +22,7 @@ class DemoDokumentasiPenelitian extends Component
             ->select('demo_dokumentasi_penelitians.*', 'penelitians.id_penelitian', 'penelitians.judul_penelitian', 'penelitians.nama_penelitian')
             ->groupBy('demo_dokumentasi_penelitians.id_demo_dokumentasi_penelitian')->simplePaginate(10);
 
-        $penelitian = PenelitianModel::all();
+        $penelitian = PenelitianModel::orderBy('penelitians.nama_penelitian', 'ASC')->get();
         return view('livewire.demo-dokumentasi-penelitian', [
             'demodokumentasi_penelitian' => $demodokumentasi_penelitian,
             'penelitian' => $penelitian
