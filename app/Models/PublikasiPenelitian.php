@@ -9,7 +9,7 @@ class PublikasiPenelitian extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'id_publikasi_penelitians';
+    protected $primaryKey = 'id_publikasi_penelitian';
 
-    protected $fillable = ['id_penelitian', 'tempat_publikasi_penelitians', 'ket_publikasi_penelitians', 'tanggal_publikasi_penelitians', 'foto_publikasi_penelitians'];
+    protected $fillable = ['id_penelitian', 'tempat_publikasi_penelitian', 'ket_publikasi_penelitian', 'tanggal_publikasi_penelitian', 'foto_publikasi_penelitian'];
 }

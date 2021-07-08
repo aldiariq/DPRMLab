@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDemoDokumentasiPenelitiansTable extends Migration
+class CreatePublikasiPenelitiansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateDemoDokumentasiPenelitiansTable extends Migration
      */
     public function up()
     {
-        Schema::create('demo_dokumentasi_penelitians', function (Blueprint $table) {
-            $table->bigIncrements('id_demo_dokumentasi_penelitians')->unsigned();
+        Schema::create('publikasi_penelitians', function (Blueprint $table) {
+            $table->bigIncrements('id_publikasi_penelitian')->unsigned();
             $table->bigInteger('id_penelitian')->unsigned();
             $table->foreign('id_penelitian')->references('id_penelitian')->on('penelitians');
-            $table->string('ket_demo_dokumentasi_penelitians');
-            $table->string('linkvideo_demo_dokumentasi_penelitians');
+            $table->string('tempat_publikasi_penelitian');
+            $table->string('ket_publikasi_penelitian');
+            $table->date('tanggal_publikasi_penelitian');
+            $table->string('foto_publikasi_penelitian');
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ class CreateDemoDokumentasiPenelitiansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('demo_dokumentasi_penelitians');
+        Schema::dropIfExists('publikasi_penelitians');
     }
 }
