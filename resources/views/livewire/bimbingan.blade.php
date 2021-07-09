@@ -43,7 +43,6 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden sm:rounded-lg">
                 <div class="min-w-screen justify-center min-h-screen bg-gray-100 flex justify-center bg-gray-100 font-sans overflow-hidden">
-
                     <div class="w-full lg:w-5/6 px-2">
                         <button wire:click="showModal()" class="w-full h-10 px-6 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
                             <h2 class="font-semibold text-sm text-white-800 leading-tight">
@@ -51,34 +50,36 @@
                             </h2>
                         </button>
                         <div class="bg-white shadow-md rounded my-6 overflow-x-scroll">
-                            <table class="min-w-max w-full table-auto">
-                                <thead>
-                                    <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                                        <th class="py-3 px-6 text-left">Nama</th>
-                                        <th class="py-3 px-6 text-left">Tanggal</th>
-                                        <th class="py-3 px-6 text-center">Keterangan</th>
-                                        <th class="py-3 px-6 text-center">Aksi</th>
+                            <table class="divide-y divide-gray-200 table-fixed w-full">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="w-1/2 px-6 py-3 bg-gray-200 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">
+                                            Nama
+                                        </th>
+                                        <th class="w-1/2 px-6 py-3 bg-gray-200 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">
+                                            Tanggal
+                                        </th>
+                                        <th class="w-1/2 px-6 py-3 bg-gray-200 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">
+                                            Keterangan
+                                        </th>
+                                        <th class="w-1/2 px-6 py-3 bg-gray-200 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">
+                                            Aksi
+                                        </th>
                                     </tr>
                                 </thead>
-                                <tbody class="text-gray-600 text-sm font-light">
+                                <tbody class="bg-white divide-y divide-gray-200">
                                     @forelse ($bimbingan as $data)
-                                    <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                        <td class="py-3 px-6 text-left whitespace-nowrap">
-                                            <div class="flex items-center">
-                                                <span class="font-medium">{{ $data->nama_anggota }}</span>
-                                            </div>
+                                    <tr>
+                                        <td class="px-6 py-4 text-sm text-gray-500 break-normal">
+                                            <span class="font-medium">{{ $data->nama_anggota }}</span>
                                         </td>
-                                        <td class="py-3 px-6 text-left">
-                                            <div class="flex items-center">
-                                                <span class="font-medium">{{ $data->tanggal_bimbingan }}</span>
-                                            </div>
+                                        <td class="px-6 py-4 text-sm text-gray-500 break-normal">
+                                            <span class="font-medium">{{ $data->tanggal_bimbingan }}</span>
                                         </td>
-                                        <td class="py-3 px-6 text-left">
-                                            <div class="flex items-center">
-                                                <span class="font-medium">{{ $data->ket_bimbingan }}</span>
-                                            </div>
+                                        <td class="px-6 py-4 text-sm text-gray-500 break-normal">
+                                            <span class="font-medium">{{ $data->ket_bimbingan }}</span>
                                         </td>
-                                        <td class="py-3 px-6 text-center">
+                                        <td class="px-6 py-4 text-sm text-gray-500 break-normal">
                                             <div class="flex item-center justify-center">
                                                 <button wire:click="edit({{ $data->id_bimbingan }})" class="flex text-sm border-2 border-transparent transition">
                                                     <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">

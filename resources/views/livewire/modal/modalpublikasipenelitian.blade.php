@@ -12,18 +12,18 @@
                     <div class="">
                         <div class="mb-4">
                             <label for="id_penelitian" class="block text-gray-700 text-sm font-bold mb-2">Judul Penelitian :</label>
-                            <select id="id_penelitian" wire:model="id_penelitian" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style=" width: 100%">
+                            <select id="id_penelitian" wire:model="id_penelitian" class="flex flex-wrap shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 <option value="">
                                     {{ __('Pilih Judul Penelitian') }}
                                 </option>
                                 @foreach ($penelitian as $data)
                                 @if($data->id_penelitian == $id_penelitian)
                                 <option value="{{ $data->id_penelitian }}">
-                                    {{ $data->judul_penelitian }}
+                                    <p class="break-all">{{ $data->judul_penelitian }}</p>
                                 </option>
                                 @else
                                 <option value="{{ $data->id_penelitian }}">
-                                    {{ $data->judul_penelitian }}
+                                    <p class="break-all">{{ $data->judul_penelitian }}</p>
                                 </option>
                                 @endif
                                 @endforeach

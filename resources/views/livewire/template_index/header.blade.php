@@ -10,7 +10,9 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/logoutama.png" rel="icon">
+  <!-- <link rel="icon" href="{{ URL::asset('assets/img/logoutama.png') }}" type="image/x-icon" /> -->
+  <link rel="shortcut icon" href="{{ asset('assets/img/logoutama.png') }}">
+  <!-- <link rel="icon" type="image/png" href="{{ asset('assets/img/logoutama.png') }}"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -34,5 +36,5 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  
+
 </head>
