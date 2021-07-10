@@ -19,11 +19,19 @@
                                 @foreach ($penelitian as $data)
                                 @if($data->id_penelitian == $id_penelitian)
                                 <option value="{{ $data->id_penelitian }}">
-                                    <p class="break-normal">{{ $data->judul_penelitian }}</p>
+                                    <div class="overflow-hidden">
+                                        <span>
+                                            {{ $data->judul_penelitian }}
+                                        </span>
+                                    </div>
                                 </option>
                                 @else
                                 <option value="{{ $data->id_penelitian }}">
-                                    <p class="break-normal">{{ $data->judul_penelitian }}</p>
+                                    <div class="overflow-hidden">
+                                        <span>
+                                            {{ $data->judul_penelitian }}
+                                        </span>
+                                    </div>
                                 </option>
                                 @endif
                                 @endforeach

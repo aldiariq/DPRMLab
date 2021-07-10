@@ -294,11 +294,11 @@
                             <div class="col-md-6 order-1 order-md-2" data-aos="fade-left">
                                 @endif
                                 @php
-                                $url_youtube = $data->linkvideo_demo_dokumentasi_penelitian;
-                                $video_id = explode("?v=", $url_youtube);
+                                $url = $data->linkvideo_demo_dokumentasi_penelitian;
+                                parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
                                 @endphp
                                 <div class="ratio ratio-16x9">
-                                    <iframe src="https://www.youtube.com/embed/{{ $video_id[1] }}" title="YouTube video" allowfullscreen></iframe>
+                                    <iframe src="https://www.youtube.com/embed/{{ $my_array_of_vars['v'] }}" title="YouTube video" allowfullscreen></iframe>
                                 </div>
                             </div>
                             <div class="col-md-6 pt-4" data-aos="fade-up">
@@ -333,11 +333,11 @@
                                                                 <div class="col-md-6 order-1 order-md-2" data-aos="fade-left">
                                                                     @endif
                                                                     @php
-                                                                    $url_youtube = $data->linkvideo_demo_dokumentasi_penelitian;
-                                                                    $video_id = explode("?v=", $url_youtube);
+                                                                    $url = $data->linkvideo_demo_dokumentasi_penelitian;
+                                                                    parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
                                                                     @endphp
                                                                     <div class="ratio ratio-16x9">
-                                                                        <iframe src="https://www.youtube.com/embed/{{ $video_id[1] }}" title="YouTube video" allowfullscreen></iframe>
+                                                                        <iframe src="https://www.youtube.com/embed/{{ $my_array_of_vars['v'] }}" title="YouTube video" allowfullscreen></iframe>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6 pt-4" data-aos="fade-up">
