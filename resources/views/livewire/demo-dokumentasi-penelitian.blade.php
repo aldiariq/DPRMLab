@@ -51,7 +51,7 @@
                             </h2>
                         </button>
                         <div class="bg-white shadow-md rounded my-6 overflow-x-scroll">
-                            <table class="divide-y divide-gray-200 table-fixed w-full">
+                            <table class="divide-y divide-gray-200 w-full">
                                 <thead class="bg-gray-50">
                                     <tr>
                                         <th class="w-1/2 px-6 py-3 bg-gray-200 text-left text-xs font-medium text-gray-800 uppercase tracking-wider">

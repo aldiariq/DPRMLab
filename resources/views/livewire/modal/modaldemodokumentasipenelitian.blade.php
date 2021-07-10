@@ -37,6 +37,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="linkvideo_demo_dokumentasi_penelitian" class="block text-gray-700 text-sm font-bold mb-2">Link Video :</label>
+                            <span class="text-blue-500 text-xs">{{ __('Contoh Link : https://www.youtube.com/watch?v=INh0A88iJC8&ab_channel=elektroprogramming') }}</span>
                             <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="linkvideo_demo_dokumentasi_penelitian" wire:model="linkvideo_demo_dokumentasi_penelitian">
                             @error('linkvideo_demo_dokumentasi_penelitian') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
