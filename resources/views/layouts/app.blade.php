@@ -9,9 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Favicons -->
-    <link href="assets/img/logoutama.png" rel="icon">
-
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
@@ -22,6 +19,9 @@
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
+
+    <!-- Favicons -->
+  <link href="assets/img/logoutama.png" rel="icon">
 </head>
 
 <body class="font-sans antialiased">
