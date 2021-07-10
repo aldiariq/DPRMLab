@@ -19,11 +19,11 @@
                                 @foreach ($penelitian as $data)
                                 @if($data->id_penelitian == $id_penelitian)
                                 <option value="{{ $data->id_penelitian }}">
-                                    <p class="break-all">{{ $data->judul_penelitian }}</p>
+                                    <p class="break-normal">{{ $data->judul_penelitian }}</p>
                                 </option>
                                 @else
                                 <option value="{{ $data->id_penelitian }}">
-                                    <p class="break-all">{{ $data->judul_penelitian }}</p>
+                                    <p class="break-normal">{{ $data->judul_penelitian }}</p>
                                 </option>
                                 @endif
                                 @endforeach

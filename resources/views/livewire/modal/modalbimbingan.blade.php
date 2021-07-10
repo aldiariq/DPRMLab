@@ -12,7 +12,7 @@
                     <div class="">
                         <div class="mb-4">
                             <label for="id_anggota" class="block text-gray-700 text-sm font-bold mb-2">Nama Anggota :</label>
-                            <select id="id_anggota" wire:model="id_anggota" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style=" width: 100%">
+                            <select id="id_anggota" wire:model="id_anggota" class="flex flex-wrap shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                 <option value="">
                                     {{ __('Pilih Nama Anggota') }}
                                 </option>
