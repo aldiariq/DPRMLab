@@ -179,7 +179,33 @@
     </div>
 </div>
 
-<div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-1">
+<div class="bg-gray-200 bg-opacity-25 grid grid-cols-2 md:grid-cols-2">
+    <div class="p-6 border-t border-gray-200 md:border-l">
+        <div class="flex items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400">
+                <path d="M10 12h4v4h-4zM16 12h4v4h-4zM22 12h4v4h-4zM4 24h4v4h-4zM10 24h4v4h-4zM16 24h4v4h-4zM10 18h4v4h-4zM16 18h4v4h-4zM22 18h4v4h-4zM4 18h4v4h-4zM26 0v2h-4v-2h-14v2h-4v-2h-4v32h30v-32h-4zM28 30h-26v-22h26v22z"></path>
+            </svg>
+            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Kelola Jadwal Praktikum</div>
+        </div>
+
+        <div class="ml-12">
+            <div class="mt-2 text-sm text-gray-500">
+                Halaman pada menu ini berfungsi untuk mengelola jadwal praktikum mulai dari melihat, menambah, mengubah dan menghapus data jadwal praktikum.
+            </div>
+
+            <a href="{{ url('/bimbingan') }}">
+                <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                    <div>Menuju Menu</div>
+
+                    <div class="ml-1 text-indigo-500">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
     <div class="p-6 border-t border-gray-200 md:border-l">
         <div class="flex items-center">
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 50 50" class="w-8 h-8 text-gray-400">
@@ -189,11 +215,44 @@
         </div>
 
         <div class="ml-12">
-            <div class="mt-2 text-sm text-gray-500 text-center">
+            <div class="mt-2 text-sm text-gray-500">
                 Halaman pada menu ini berfungsi untuk melihat saran atau masukan dari pengunjung.
             </div>
 
             <a href="{{ url('/saranmasukan') }}">
+                <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                    <div>Menuju Menu</div>
+
+                    <div class="ml-1 text-indigo-500">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-1">
+    <div class="p-6 border-t border-gray-200 md:border-l">
+        <div class="flex items-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 50 50" class="w-8 h-8 text-gray-400">
+                <title>Info Help</title>
+                <desc>A line styled icon from Orion Icon Library.</desc>
+                <circle data-name="layer2" cx="32" cy="32" r="30" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></circle>
+                <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2" d="M28 26h4v22m-4 .008h8" stroke-linejoin="round" stroke-linecap="round"></path>
+                <circle data-name="layer1" cx="31" cy="19" r="2" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></circle>
+            </svg>
+            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Kelola Informasi Laboratorium</div>
+        </div>
+
+        <div class="ml-12">
+            <div class="mt-2 text-sm text-gray-500 text-center">
+                Halaman pada menu ini berfungsi untuk mengelola informasi laboratorium seperti logo, foto, nama, penjelasan singkat, fokus penelitian, instagram, youtube, github, dan email laboratorium.
+            </div>
+
+            <a href="{{ url('/bimbingan') }}">
                 <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
                     <div>Menuju Menu</div>
 
