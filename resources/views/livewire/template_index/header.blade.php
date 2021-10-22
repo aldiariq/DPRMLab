@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>DPRMLab Website</title>
+  @foreach($laboratorium as $data)
+  <title>{{ $data->nama_laboratoriums }} Website</title>
+  @endforeach
   <meta content="" name="description">
   <meta content="" name="keywords">
 

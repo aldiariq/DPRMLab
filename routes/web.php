@@ -13,6 +13,7 @@ use App\Http\Livewire\Anggota;
 use App\Http\Livewire\Bimbingan;
 use App\Http\Livewire\Saranmasukan;
 use App\Http\Livewire\Praktikum;
+use App\Http\Livewire\Laboratorium;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +37,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/anggota', Anggota::class)->name('anggota');
     Route::get('/bimbingan', Bimbingan::class)->name('bimbingan');
     Route::get('/praktikum', Praktikum::class)->name('praktikum');
+    Route::get('/laboratorium', Laboratorium::class)->name('laboratorium');
     Route::get('/saranmasukan', Saranmasukan::class)->name('saranmasukan');
 });
