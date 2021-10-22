@@ -14,9 +14,11 @@ class Laboratorium extends Component
     use WithFileUploads;
     public $id_laboratorium = null, $logo_laboratorium, $old_logo_laboratorium, $foto_laboratorium, $old_foto_laboratorium, $nama_laboratorium, $penjelasan_laboratorium, $instagram_laboratorium, $youtube_laboratorium, $github_laboratorium, $email_laboratorium, $warnatajuk_laboratorium;
     public $id_fokuspenelitian = null, $topik_fokuspenelitian;
-    public $modallaboratorium = false;
+    
     public $modalfokuspenelitian = false;
     public $modaldeletefokuspenelitian = false;
+
+    public $modallaboratorium = false;
 
     public function render()
     {
@@ -28,19 +30,18 @@ class Laboratorium extends Component
         ]);
     }
 
+    public function showModalfokuspenelitian()
+    {
+        $this->modalfokuspenelitian = true;
+    }
+
     public function showModallaboratorium()
     {
         $this->modallaboratorium = true;
     }
 
-    public function showModalpenelitian()
-    {
-        $this->modalfokuspenelitian = true;
-    }
-
     public function closeModal()
     {
-        $this->modallaboratorium = false;
         $this->modalfokuspenelitian = false;
         $this->modaldeletefokuspenelitian = false;
         $this->resetInput();
@@ -52,5 +53,39 @@ class Laboratorium extends Component
     {
         $this->id_fokuspenelitian = null;
         $this->topik_fokuspenelitian = "";
+    }
+
+    public function storeFokuspenelitian()
+    {
+        $this->validate([
+            'topik_fokuspenelitian' => 'required'
+        ]);
+
+        FokuspenelitianModel::updateOrCreate(['id_fokuspenelitians' => $this->id_fokuspenelitian], [
+            'topik_fokuspenelitians' => $this->topik_fokuspenelitian
+        ]);
+
+        $this->closeModal();
+    }
+
+    public function editFokuspenelitian($id_fokuspenelitian)
+    {
+        $fokuspenelitian = FokuspenelitianModel::find($id_fokuspenelitian);
+        $this->topik_fokuspenelitian = $fokuspenelitian->topik_fokuspenelitians;
+        $this->id_fokuspenelitian = $id_fokuspenelitian;
+        $this->showModalfokuspenelitian();
+    }
+
+    public function showModaldeletefokuspenelitian($id_fokuspenelitian)
+    {
+        $this->modaldeletefokuspenelitian = true;
+        $this->id_fokuspenelitian = $id_fokuspenelitian;
+    }
+
+    public function deleteFokuspenelitian($id)
+    {
+        $fokuspenelitian = FokuspenelitianModel::find($id);
+        $result = $fokuspenelitian->delete();
+        $this->closeModal();
     }
 }
