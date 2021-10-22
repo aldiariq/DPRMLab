@@ -24,7 +24,12 @@
                             </ul>
                         </li>
                         <li><a class="nav-link scrollto" href="#anggotakami">Anggota Kami</a></li>
-                        <li><a class="nav-link scrollto" href="#jadwalbimbingan">Jadwal Bimbingan</a></li>
+                        <li class="dropdown"><a class="nav-link scrollto" href="#penelitian"><span>Jadwal</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a class="nav-link scrollto" href="#jadwalbimbingan">Jadwal Bimbingan</a></li>
+                                <li><a class="nav-link scrollto" href="#jadwalpraktikum">Jadwal Praktikum</a></li>
+                            </ul>
+                        </li>
                         <li><a class="nav-link scrollto" href="#saranmasukan">Saran atau Masukan</a></li>
 
                         @if (Route::has('login'))
@@ -421,6 +426,43 @@
                         </div>
                         <div class="py-3">
                             {{ $bimbingan->links() }}
+                        </div>
+                    </div>
+                </div>
+            </section><!-- End Jadwal Bimbingan Section -->
+
+            <!-- ======= Jadwal Praktikum Section ======= -->
+            <section id="jadwalpraktikum" class="faq">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Jadwal Praktikum</h2>
+                        <p>Berikut Jadwal Praktikum pada Grup Riset Kami.</p>
+                        <div class="section-bg mt-3 px-3 py-3">
+                            <table id="tabeljadwalpraktikum" class="table table-hover" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Hari</th>
+                                        <th>Waktu</th>
+                                        <th>Mata Kuliah</th>
+                                        <th>Kelas</th>
+                                        <th>Dosen</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($praktikum as $data)
+                                    <tr>
+                                        <td>{{ $data->hari_praktikums }}</td>
+                                        <td>{{ $data->waktumulai_praktikums }} s/d {{ $data->waktuselesai_praktikums }} WIB</td>
+                                        <td>{{ $data->matakuliah_praktikums }}</td>
+                                        <td>{{ $data->kelas_praktikums }}</td>
+                                        <td>{{ $data->dosen_praktikums }}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="py-3">
+                            {{ $praktikum->links() }}
                         </div>
                     </div>
                 </div>

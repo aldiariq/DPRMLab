@@ -10,6 +10,7 @@ use App\Models\DemoDokumentasiPenelitian as DemoDokumentasiPenelitianModel;
 use App\Models\Anggota as AnggotaModel;
 use App\Models\Bimbingan as BimbinganModel;
 use App\Models\Saranmasukan as SaranmasukanModel;
+use App\Models\Praktikum as PraktikumModel;
 use Livewire\WithPagination;
 
 class Index extends Component
@@ -42,7 +43,8 @@ class Index extends Component
             ->select('demo_dokumentasi_penelitians.*', 'penelitians.id_penelitian', 'penelitians.judul_penelitian', 'penelitians.nama_penelitian')
             ->groupBy('demo_dokumentasi_penelitians.id_demo_dokumentasi_penelitian')->get();
         $anggota = AnggotaModel::all();
-
+        $praktikum = PraktikumModel::select('praktikums.*')->simplePaginate(5);
+        
         return view('livewire.index', [
             'pembimbing' => $pembimbing,
             'penelitianterbaru' => $penelitianterbaru,
@@ -52,7 +54,8 @@ class Index extends Component
             'demodokumentasi_penelitian_terbaru' => $demodokumentasi_penelitian_terbaru,
             'demodokumentasi_penelitian' => $demodokumentasi_penelitian,
             'bimbingan' => $bimbingan,
-            'anggota' => $anggota
+            'anggota' => $anggota,
+            'praktikum' => $praktikum
         ]);
     }
 
