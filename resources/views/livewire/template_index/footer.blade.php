@@ -18,24 +18,25 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
+          @foreach($laboratorium as $data)
           <div class="col-lg-6 col-md-6 footer-contact">
-            <h3>DPRMLab</h3>
+            <h3>{{ $data->nama_laboratoriums }}</h3>
             <p>
               Fakultas Ilmu Komputer Universitas Sriwijaya <br>
               Jl. Raya Palembang - Prabumulih <br>
               Km. 32 Indralaya, Ogan Ilir, <br>
               Sumatera Selatan <br><br>
-              <strong>Email :</strong> dprmlab2020@gmail.com <br>
+              <strong>Email : </strong>{{ $data->email_laboratoriums }}<br>
             </p>
           </div>
+          @endforeach
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Topik Penelitian Kami</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Data Science</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Machine Learning</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Cryptography</a></li>
+              @foreach($fokuspenelitian as $data)
+              <li><i class="bx bx-chevron-right"></i> <a href="#">{{ $data->topik_fokuspenelitians }}</a></li>
+              @endforeach
             </ul>
           </div>
 
@@ -43,10 +44,12 @@
             <h4>Tetap Terhubung Dengan Kami</h4>
             <p>Berikut tautan sosial media dari grup riset kami.</p>
             <div class="social-links mt-3">
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
-              <a href="#" class="github"><i class="bx bxl-github"></i></a>
-              <a href="mailto:dprmlab2020@gmail.com" class="email"><i class="bx bx-mail-send"></i></a>
+              @foreach($laboratorium as $data)
+              <a href="{{ $data->instagram_laboratoriums }}" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="{{ $data->youtube_laboratoriums }}" class="youtube"><i class="bx bxl-youtube"></i></a>
+              <a href="{{ $data->github_laboratoriums }}" class="github"><i class="bx bxl-github"></i></a>
+              <a href="mailto:{{ $data->email_laboratoriums }}" class="email"><i class="bx bx-mail-send"></i></a>
+              @endforeach
             </div>
           </div>
         </div>
@@ -55,7 +58,9 @@
 
     <div class="container py-4">
       <div class="copyright">
-        Copyright &copy; 2021 <strong><span>DPRMLab</span></strong>. All Rights Reserved
+        @foreach($laboratorium as $data)
+        Copyright &copy; 2021 <strong><span>{{ $data->nama_laboratoriums }}</span></strong>. All Rights Reserved
+        @endforeach
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -66,6 +71,7 @@
       </div>
     </div>
   </footer><!-- End Footer -->
+
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -79,7 +85,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
+
   </body>
 
   </html>

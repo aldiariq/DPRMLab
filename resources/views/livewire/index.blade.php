@@ -84,7 +84,9 @@
                         </div>
                     </div>
                     <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
-                        <img src="assets/img/gambarheader.png" class="img-fluid" alt="">
+                        @foreach($laboratorium as $data)
+                        <img src="{{ asset('storage/'.$data->foto_laboratoriums) }}" class="img-fluid" alt="">
+                        @endforeach
                     </div>
                 </div>
             </div>
