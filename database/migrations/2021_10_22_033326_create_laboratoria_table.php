@@ -13,9 +13,10 @@ class CreateLaboratoriaTable extends Migration
      */
     public function up()
     {
-        Schema::create('laboratoriums', function (Blueprint $table) {
+        Schema::create('laboratoria', function (Blueprint $table) {
             $table->bigIncrements('id_laboratoriums')->unsigned();
             $table->string('logo_laboratoriums');
+            $table->string('foto_laboratoriums');
             $table->string('nama_laboratoriums');
             $table->string('penjelasan_laboratoriums');
             $table->string('instagram_laboratoriums');
@@ -34,6 +35,6 @@ class CreateLaboratoriaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('laboratoriums');
+        Schema::dropIfExists('laboratoria');
     }
 }

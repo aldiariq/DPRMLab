@@ -11,6 +11,8 @@ use App\Models\Anggota as AnggotaModel;
 use App\Models\Bimbingan as BimbinganModel;
 use App\Models\Saranmasukan as SaranmasukanModel;
 use App\Models\Praktikum as PraktikumModel;
+use App\Models\Laboratorium as LaboratoriumModel;
+use App\Models\Fokuspenelitian as FokuspenelitianModel;
 use Livewire\WithPagination;
 
 class Index extends Component
@@ -44,6 +46,8 @@ class Index extends Component
             ->groupBy('demo_dokumentasi_penelitians.id_demo_dokumentasi_penelitian')->get();
         $anggota = AnggotaModel::all();
         $praktikum = PraktikumModel::select('praktikums.*')->simplePaginate(5);
+        $laboratorium = LaboratoriumModel::all();
+        $fokuspenelitian = FokuspenelitianModel::all();
         
         return view('livewire.index', [
             'pembimbing' => $pembimbing,
@@ -55,7 +59,9 @@ class Index extends Component
             'demodokumentasi_penelitian' => $demodokumentasi_penelitian,
             'bimbingan' => $bimbingan,
             'anggota' => $anggota,
-            'praktikum' => $praktikum
+            'praktikum' => $praktikum,
+            'laboratorium' => $laboratorium,
+            'fokuspenelitian' => $fokuspenelitian
         ]);
     }
 

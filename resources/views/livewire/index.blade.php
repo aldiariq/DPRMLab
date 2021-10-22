@@ -7,7 +7,9 @@
             <div class="container d-flex align-items-center justify-content-between">
 
                 <div class="logo mt-3 ">
-                    <a href="{{ url('/') }}"><img src="assets/img/logoutama.png" alt="" class="img-fluid mb-2"></a>
+                    @foreach($laboratorium as $data)
+                    <a href="{{ url('/') }}"><img src="{{ asset('storage/'.$data->logo_laboratoriums) }}" alt="" class="img-fluid mb-2"></a>
+                    @endforeach
                     <!-- <h1><a href="index.html" class="fw-bold">DPRMLab</a></h1> -->
                     <!-- Uncomment below if you prefer to use an image logo -->
                 </div>
@@ -64,23 +66,21 @@
                 <div class="row">
                     <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
                         <div>
-                            <h1>Data Science and Machine Learning Research Laboratory</h1>
-                            <h2>Penjelasan DPRMLab</h2>
+                            @foreach($laboratorium as $data)
+                            <h1>{{ $data->nama_laboratoriums }}</h1>
+                            <h2>{{ $data->penjelasan_laboratoriums }}</h2>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="row">
+                                        @foreach($fokuspenelitian as $data)
                                         <div class="col-lg-4 mt-3">
-                                            <a href="#" class="download-btn"><i class="bx bx-book"></i> Data Science</a>
+                                            <a href="#" class="download-btn"><i class="bx bx-book"></i> {{ $data->topik_fokuspenelitians }}</a>
                                         </div>
-                                        <div class="col-lg-4 mt-3">
-                                            <a href="#" class="download-btn"><i class="bx bx-message-alt-dots"></i> Machine Learning</a>
-                                        </div>
-                                        <div class="col-lg-4 mt-3">
-                                            <a href="#" class="download-btn"><i class="bx bx-lock"></i> Cryptography</a>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
