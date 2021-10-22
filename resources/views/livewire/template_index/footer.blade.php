@@ -43,10 +43,10 @@
             <h4>Tetap Terhubung Dengan Kami</h4>
             <p>Berikut tautan sosial media dari grup riset kami.</p>
             <div class="social-links mt-3">
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="youtube"><i class="bx bxl-youtube"></i></a>
               <a href="#" class="github"><i class="bx bxl-github"></i></a>
-              <a href="mailto:dprmlab2020@gmail.com" class="github"><i class="bx bx-mail-send"></i></a>
+              <a href="mailto:dprmlab2020@gmail.com" class="email"><i class="bx bx-mail-send"></i></a>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-app-landing-page-template/ -->
-        Web Template Inspired by Appland at <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Web Template by Appland at <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer><!-- End Footer -->

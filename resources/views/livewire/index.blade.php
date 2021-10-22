@@ -24,7 +24,7 @@
                             </ul>
                         </li>
                         <li><a class="nav-link scrollto" href="#anggotakami">Anggota Kami</a></li>
-                        <li class="dropdown"><a class="nav-link scrollto" href="#penelitian"><span>Jadwal</span> <i class="bi bi-chevron-down"></i></a>
+                        <li class="dropdown"><a class="nav-link scrollto" href="#jadwalbimbingan"><span>Jadwal</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
                                 <li><a class="nav-link scrollto" href="#jadwalbimbingan">Jadwal Bimbingan</a></li>
                                 <li><a class="nav-link scrollto" href="#jadwalpraktikum">Jadwal Praktikum</a></li>
