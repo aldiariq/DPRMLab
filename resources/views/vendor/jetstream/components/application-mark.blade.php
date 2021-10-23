@@ -1,0 +1,1 @@
+<a href="{{ url('/dashboard') }}"><img src="{{ asset('assets/img/logoutama.png') }}" alt="" width="48"></a>
