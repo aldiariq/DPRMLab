@@ -193,7 +193,7 @@
                 Halaman pada menu ini berfungsi untuk mengelola jadwal praktikum mulai dari melihat, menambah, mengubah dan menghapus data jadwal praktikum.
             </div>
 
-            <a href="{{ url('/bimbingan') }}">
+            <a href="{{ url('/praktikum') }}">
                 <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
                     <div>Menuju Menu</div>
 
@@ -238,8 +238,6 @@
     <div class="p-6 border-t border-gray-200 md:border-l">
         <div class="flex items-center">
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 50 50" class="w-8 h-8 text-gray-400">
-                <title>Info Help</title>
-                <desc>A line styled icon from Orion Icon Library.</desc>
                 <circle data-name="layer2" cx="32" cy="32" r="30" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></circle>
                 <path data-name="layer1" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2" d="M28 26h4v22m-4 .008h8" stroke-linejoin="round" stroke-linecap="round"></path>
                 <circle data-name="layer1" cx="31" cy="19" r="2" fill="none" stroke="#202020" stroke-miterlimit="10" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></circle>
@@ -252,7 +250,7 @@
                 Halaman pada menu ini berfungsi untuk mengelola informasi laboratorium seperti logo, foto, nama, penjelasan singkat, fokus penelitian, instagram, youtube, github, dan email laboratorium.
             </div>
 
-            <a href="{{ url('/bimbingan') }}">
+            <a href="{{ url('/laboratorium') }}">
                 <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
                     <div>Menuju Menu</div>
 
