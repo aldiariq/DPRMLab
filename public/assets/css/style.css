@@ -14,12 +14,12 @@ body {
 }
 
 a {
-  color: #5777ba;
+  color: #000000;
   text-decoration: none;
 }
 
 a:hover {
-  color: #7b94c9;
+  color: #353535;
   text-decoration: none;
 }
 
@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #5777ba;
+  color: var(--color);
 }
 
 .navbar .getstarted {
@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #5777ba;
+  color: #000000;
 }
 
 .navbar .dropdown:hover > ul {
@@ -342,7 +342,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 140px 0 100px 0;
 }
 
-#hero::before {
+#hero:before {
   content: '';
   position: absolute;
   right: -100%;
@@ -350,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 250%;
   height: 200%;
   z-index: -1;
-  background-color: #8ac1ff;
+  background-color: var(--background-color);
   transform: skewY(135deg);
 }
 
@@ -378,7 +378,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 3px;
   transition: 0.5s;
   color: #fff;
-  background: #47536e;
+  background: var(--background-color);
   position: relative;
 }
 
@@ -650,6 +650,7 @@ section {
   width: 90px;
   border-radius: 10px;
   border: 6px solid #fff;
+  background-color: #ffffff;
   position: absolute;
   left: -45px;
 }
@@ -887,7 +888,7 @@ section {
 }
 
 .faq .accordion-list a.collapsed:hover {
-  color: #5777ba;
+  color: #000000;
 }
 
 .faq .accordion-list a.collapsed .icon-show {
@@ -1062,7 +1063,7 @@ section {
 
 #saranmasukan .footer-newsletter {
   padding: 50px 0;
-  background: #eff2f8;
+  background: var(--background);
   text-align: center;
   font-size: 15px;
 }

@@ -77,6 +77,54 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <script type="text/javascript">
+    function ubahwarnaUtama(hex, percent) {
+      hex = hex.replace(/^\s*#|\s*$/g, '');
+      if (hex.length == 3) {
+        hex = hex.replace(/(.)/g, '$1$1');
+      }
+      var r = parseInt(hex.substr(0, 2), 16),
+        g = parseInt(hex.substr(2, 2), 16),
+        b = parseInt(hex.substr(4, 2), 16);
+      return '#' +
+        ((0 | (1 << 8) + r + (256 - r) * percent / 100).toString(16)).substr(1) +
+        ((0 | (1 << 8) + g + (256 - g) * percent / 100).toString(16)).substr(1) +
+        ((0 | (1 << 8) + b + (256 - b) * percent / 100).toString(16)).substr(1);
+    }
+
+    var kodeWarnautama = "@foreach($laboratorium as $data){{$data->warnatajuk_laboratoriums}}@endforeach";
+    var kodeWarna = ubahwarnaUtama(kodeWarnautama, 50);
+
+    $(document).ready(function() {
+      var menuNavbar = document.querySelector(".navbar").style;
+      menuNavbar.setProperty('--color', kodeWarnautama);
+
+      var heroHeader = document.querySelector("#hero").style;
+      heroHeader.setProperty('--background-color', kodeWarnautama);
+
+      var fokusPenelitian = document.querySelector("#hero .download-btn").style;
+      heroHeader.setProperty('--background', kodeWarnautama);
+
+      var sectionBackground = document.getElementsByClassName("section-bg");
+      for (var i = 0; i < sectionBackground.length; i++) {
+        sectionBackground[i].style.backgroundColor = kodeWarna;
+      }
+
+      var sectionSaranmasukan = document.querySelector(".footer-newsletter").style;
+      sectionSaranmasukan.setProperty('--background', kodeWarna);
+
+      var h1Elements = document.getElementsByTagName("h1");
+      var h2Elements = document.getElementsByTagName("h2");
+
+      for (var i = 0; i < h1Elements.length; i++) {
+        h1Elements[i].style.color = kodeWarnautama;
+      }
+      for (var i = 0; i < h2Elements.length; i++) {
+        h2Elements[i].style.color = kodeWarnautama;
+      }
+    });
+  </script>
+
   @livewireScripts
 
   <!-- Vendor JS Files -->
