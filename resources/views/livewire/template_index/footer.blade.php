@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <div class="section-title">
-              <h4>Saran atau Masukan</h4>
+              <h2>Saran atau Masukan</h2>
               <p>Silahkan Kirimkan Saran Atau Masukan Untuk Laboratorium Kami.</p>
             </div>
             <form>
