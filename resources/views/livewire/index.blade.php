@@ -39,14 +39,14 @@
                             @auth
                             <!-- <li><a class="getstarted scrollto" href="{{ url('/dashboard') }}">Halaman Dashboard</a></li> -->
                             <div class="logo mt-3 ">
-                                <a href="{{ url('/dashboard') }}"><img src="assets/img/logodashboard.png" alt="" class="img-fluid mb-2"></a>
+                                <a href="{{ url('/dashboard') }}"><img src="{{ url('assets/img/logodashboard.png') }}" alt="" class="img-fluid mb-2"></a>
                                 <!-- <h1><a href="index.html" class="fw-bold">DPRMLab</a></h1> -->
                                 <!-- Uncomment below if you prefer to use an image logo -->
                             </div>
                             @else
                             <!-- <li><a class="getstarted scrollto" href="{{ url('/login') }}">Halaman Login</a></li> -->
                             <div class="logo mt-3 ">
-                                <a href="{{ url('/login') }}"><img src="assets/img/logologin.png" alt="" class="img-fluid mb-2"></a>
+                                <a href="{{ url('/login') }}"><img src="{{ url('assets/img/logologin.png') }}" alt="" class="img-fluid mb-2"></a>
                             </div>
 
                             @endauth
