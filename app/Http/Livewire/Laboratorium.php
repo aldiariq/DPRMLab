@@ -93,8 +93,10 @@ class Laboratorium extends Component
     public function editLaboratorium($id_laboratorium)
     {
         $laboratorium = LaboratoriumModel::find($id_laboratorium);
-        $this->foto_laboratorium = $laboratorium->foto_laboratoriums;
         $this->logo_laboratorium = $laboratorium->logo_laboratoriums;
+        $this->old_logo_laboratorium = $laboratorium->logo_laboratoriums;
+        $this->foto_laboratorium = $laboratorium->foto_laboratoriums;
+        $this->old_foto_laboratorium = $laboratorium->foto_laboratoriums;
         $this->nama_laboratorium = $laboratorium->nama_laboratoriums;
         $this->penjelasan_laboratorium = $laboratorium->penjelasan_laboratoriums;
         $this->instagram_laboratorium = $laboratorium->instagram_laboratoriums;
@@ -102,14 +104,59 @@ class Laboratorium extends Component
         $this->github_laboratorium = $laboratorium->github_laboratoriums;
         $this->email_laboratorium = $laboratorium->email_laboratoriums;
         $this->warnatajuk_laboratorium = $laboratorium->warnatajuk_laboratoriums;
-        $this->id_laboratorium = $laboratorium->id_laboratorium;
+        $this->id_laboratorium = $laboratorium->id_laboratoriums;
         $this->showModallaboratorium();
     }
 
     public function storeLaboratorium()
     {
+        $imageValidationlogo = '';
+        if ($this->old_logo_laboratorium == null) {
+            $imageValidationlogo = "required|image|mimes:jpg,jpeg,png|max:1024";
+        }
+
+        $imageValidationfoto = '';
+        if ($this->old_foto_laboratorium == null) {
+            $imageValidationfoto = "required|image|mimes:jpg,jpeg,png|max:1024";
+        }
+
         $this->validate([
-            
+            'nama_laboratorium' => 'required',
+            'penjelasan_laboratorium' => 'required',
+            'instagram_laboratorium' => 'required',
+            'youtube_laboratorium' => 'required',
+            'github_laboratorium' => 'required',
+            'email_laboratorium' => 'required',
+            'warnatajuk_laboratorium' => 'required',
+            'logo_laboratorium' => $imageValidationlogo,
+            'foto_laboratorium' => $imageValidationfoto
         ]);
+
+        
+        
+        if ($this->logo_laboratorium != $this->old_logo_laboratorium) {
+            $fileNamelogo = $this->logo_laboratorium->store('public/laboratorium');
+        } else {
+            $fileNamelogo = $this->logo_laboratorium;
+        }
+
+        if ($this->foto_laboratorium != $this->old_foto_laboratorium) {
+            $fileNamefoto = $this->foto_laboratorium->store('public/laboratorium');
+        } else {
+            $fileNamefoto = $this->foto_laboratorium;
+        }
+
+        LaboratoriumModel::updateOrCreate(['id_laboratoriums' => $this->id_laboratorium], [
+            'logo_laboratoriums' => $fileNamelogo,
+            'foto_laboratoriums' => $fileNamefoto,
+            'nama_laboratoriums' => $this->nama_laboratorium,
+            'penjelasan_laboratoriums' => $this->penjelasan_laboratorium,
+            'instagram_laboratoriums' => $this->instagram_laboratorium,
+            'youtube_laboratoriums' => $this->youtube_laboratorium,
+            'github_laboratoriums' => $this->github_laboratorium,
+            'warnatajuk_laboratoriums' => $this->warnatajuk_laboratorium
+        ]);
+
+        $this->closeModal();
     }
 }
