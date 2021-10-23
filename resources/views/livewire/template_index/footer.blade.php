@@ -4,8 +4,10 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <h4>Saran atau Masukan</h4>
-            <p>Silahkan kirim saran atau masukan Anda demi kemajuan grup riset kami.</p>
+            <div class="section-title">
+              <h4>Saran atau Masukan</h4>
+              <p>Silahkan Kirimkan Saran Atau Masukan Untuk Laboratorium Kami.</p>
+            </div>
             <form>
               <input type="text" name="saranataumasukan" id="isi_saranmasukan" wire:model="isi_saranmasukan">
               <input wire:click.prevent="store()" type="submit" value="Kirim">

@@ -97,10 +97,12 @@
             <section id="dosenpembimbing" class="testimonials section-bg">
                 <div class="container" data-aos="fade-up">
 
+                    @foreach($laboratorium as $data)
                     <div class="section-title">
                         <h2>Dosen Pembimbing</h2>
-                        <p>Berikut Dosen Pembimbing Mahasiswa Yang Tergabung Dalam Grup Riset Penelitian DPRMLab.</p>
+                        <p>Berikut Dosen Pembimbing Mahasiswa Yang Tergabung Dalam Laboratorium Kami.</p>
                     </div>
+                    @endforeach
 
                     <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="500">
                         <div class="swiper-wrapper">
@@ -131,7 +133,7 @@
 
                     <div class="section-title">
                         <h2>Penelitian Kami</h2>
-                        <p>Berikut Hasil Penelitian yang Telah dan Sedang Dilaksanakan.</p>
+                        <p>Berikut Hasil Penelitian yang Sedang dan Telah Dilaksanakan.</p>
                     </div>
 
                     @php
@@ -372,10 +374,12 @@
             <section id="anggotakami" class="testimonials section-bg">
                 <div class="container" data-aos="fade-up">
 
+                    @foreach($laboratorium as $data)
                     <div class="section-title">
                         <h2>Anggota Kami</h2>
-                        <p>Berikut Mahasiswa Yang Tergabung Dalam Grup Riset Penelitian DPRMLab.</p>
+                        <p>Berikut Mahasiswa Yang Tergabung Dalam Laboratorium Kami.</p>
                     </div>
+                    @endforeach
 
                     <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
@@ -404,8 +408,10 @@
             <section id="jadwalbimbingan" class="faq">
                 <div class="container">
                     <div class="section-title">
-                        <h2>Jadwal Bimbingan</h2>
-                        <p>Berikut Jadwal Bimbingan yang Akan Datang pada Grup Riset Kami.</p>
+                        <div class="section-title">
+                            <h2>Jadwal Bimbingan</h2>
+                            <p>Berikut Jadwal Bimbingan Yang Akan Datang Pada Laboratorium Kami.</p>
+                        </div>
                         <div class="section-bg mt-3 px-3 py-3">
                             <table id="tabeljadwalbimbingan" class="table table-hover" style="width:100%">
                                 <thead>
@@ -437,8 +443,10 @@
             <section id="jadwalpraktikum" class="faq">
                 <div class="container">
                     <div class="section-title">
-                        <h2>Jadwal Praktikum</h2>
-                        <p>Berikut Jadwal Praktikum pada Grup Riset Kami.</p>
+                        <div class="section-title">
+                            <h2>Jadwal Praktikum</h2>
+                            <p>Berikut Jadwal Praktikum Yang Akan Datang Pada Laboratorium Kami.</p>
+                        </div>
                         <div class="section-bg mt-3 px-3 py-3">
                             <table id="tabeljadwalpraktikum" class="table table-hover" style="width:100%">
                                 <thead>
