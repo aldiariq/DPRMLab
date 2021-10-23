@@ -1102,7 +1102,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #5777ba;
+  background: #54575e;
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
@@ -1110,7 +1110,7 @@ section {
 }
 
 #saranmasukan .footer-newsletter form input[type="submit"]:hover {
-  background: #415f9d;
+  background: #383838;
 }
 
 #saranmasukan .footer-top {
@@ -1183,13 +1183,13 @@ section {
 
 #saranmasukan .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #5777ba;
+  color: #000000;
 }
 
 #saranmasukan .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #5777ba;
+  background: #000000;
   color: #fff;
   line-height: 1;
   padding: 8px 0;

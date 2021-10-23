@@ -31,19 +31,19 @@ class Index extends Component
             ->groupBy('bimbingans.id_bimbingan')
             ->orderBy('bimbingans.tanggal_bimbingan', 'DESC')->simplePaginate(5);
         $penelitianterbaru = PenelitianModel::latest()->limit(2)->get();
-        $penelitian = PenelitianModel::oldest()->get();
+        $penelitian = PenelitianModel::latest()->limit(10)->get();
         $publikasi_penelitian_terbaru = PublikasiPenelitianModel::join('penelitians', 'penelitians.id_penelitian', '=', 'publikasi_penelitians.id_penelitian')
             ->select('publikasi_penelitians.*', 'penelitians.id_penelitian', 'penelitians.judul_penelitian', 'penelitians.nama_penelitian')
             ->groupBy('publikasi_penelitians.id_publikasi_penelitian')->latest()->limit(2)->get();
         $publikasi_penelitian = PublikasiPenelitianModel::join('penelitians', 'penelitians.id_penelitian', '=', 'publikasi_penelitians.id_penelitian')
             ->select('publikasi_penelitians.*', 'penelitians.id_penelitian', 'penelitians.judul_penelitian', 'penelitians.nama_penelitian')
-            ->groupBy('publikasi_penelitians.id_publikasi_penelitian')->get();
+            ->groupBy('publikasi_penelitians.id_publikasi_penelitian')->latest()->limit(10)->get();
         $demodokumentasi_penelitian_terbaru = $demodokumentasi_penelitian = DemoDokumentasiPenelitianModel::join('penelitians', 'penelitians.id_penelitian', '=', 'demo_dokumentasi_penelitians.id_penelitian')
             ->select('demo_dokumentasi_penelitians.*', 'penelitians.id_penelitian', 'penelitians.judul_penelitian', 'penelitians.nama_penelitian')
             ->groupBy('demo_dokumentasi_penelitians.id_demo_dokumentasi_penelitian')->latest()->limit(2)->get();
         $demodokumentasi_penelitian = $demodokumentasi_penelitian = DemoDokumentasiPenelitianModel::join('penelitians', 'penelitians.id_penelitian', '=', 'demo_dokumentasi_penelitians.id_penelitian')
             ->select('demo_dokumentasi_penelitians.*', 'penelitians.id_penelitian', 'penelitians.judul_penelitian', 'penelitians.nama_penelitian')
-            ->groupBy('demo_dokumentasi_penelitians.id_demo_dokumentasi_penelitian')->get();
+            ->groupBy('demo_dokumentasi_penelitians.id_demo_dokumentasi_penelitian')->latest()->limit(10)->get();
         $anggota = AnggotaModel::all();
         $praktikum = PraktikumModel::select('praktikums.*')->simplePaginate(5);
         $laboratorium = LaboratoriumModel::all();
