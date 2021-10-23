@@ -7,6 +7,7 @@ use App\Models\Pembimbing as PembimbingModel;
 use App\Models\Penelitian as PenelitianModel;
 use App\Models\PublikasiPenelitian as PublikasiPenelitianModel;
 use App\Models\DemoDokumentasiPenelitian as DemoDokumentasiPenelitianModel;
+use App\Models\Berita as BeritaModel;
 use App\Models\Anggota as AnggotaModel;
 use App\Models\Bimbingan as BimbinganModel;
 use App\Models\Saranmasukan as SaranmasukanModel;
@@ -44,11 +45,13 @@ class Index extends Component
         $demodokumentasi_penelitian = $demodokumentasi_penelitian = DemoDokumentasiPenelitianModel::join('penelitians', 'penelitians.id_penelitian', '=', 'demo_dokumentasi_penelitians.id_penelitian')
             ->select('demo_dokumentasi_penelitians.*', 'penelitians.id_penelitian', 'penelitians.judul_penelitian', 'penelitians.nama_penelitian')
             ->groupBy('demo_dokumentasi_penelitians.id_demo_dokumentasi_penelitian')->latest()->limit(10)->get();
+        $beritaterbaru = BeritaModel::latest()->limit(2)->get();
+        $berita = BeritaModel::latest()->limit(10)->get();
         $anggota = AnggotaModel::all();
         $praktikum = PraktikumModel::select('praktikums.*')->simplePaginate(5);
         $laboratorium = LaboratoriumModel::all();
         $fokuspenelitian = FokuspenelitianModel::all();
-        
+
         return view('livewire.index', [
             'pembimbing' => $pembimbing,
             'penelitianterbaru' => $penelitianterbaru,
@@ -57,6 +60,8 @@ class Index extends Component
             'publikasi_penelitian' => $publikasi_penelitian,
             'demodokumentasi_penelitian_terbaru' => $demodokumentasi_penelitian_terbaru,
             'demodokumentasi_penelitian' => $demodokumentasi_penelitian,
+            'beritaterbaru' => $beritaterbaru,
+            'berita' => $berita,
             'bimbingan' => $bimbingan,
             'anggota' => $anggota,
             'praktikum' => $praktikum,

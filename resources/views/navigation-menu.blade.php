@@ -56,11 +56,11 @@
                     </x-jet-dropdown>
                 </div>
 
-                <!-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('penelitian') }}" :active="request()->routeIs('penelitian')">
-                        {{ __('Penelitian') }}
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('berita') }}" :active="request()->routeIs('berita')">
+                        {{ __('Berita') }}
                     </x-jet-nav-link>
-                </div> -->
+                </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('anggota') }}" :active="request()->routeIs('anggota')">

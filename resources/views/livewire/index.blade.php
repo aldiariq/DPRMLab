@@ -25,6 +25,7 @@
                                 <li><a class="nav-link scrollto" href="#demodokumentasipenelitian">Demo/Dokumentasi Penelitian</a></li>
                             </ul>
                         </li>
+                        <li><a class="nav-link scrollto" href="#berita">Berita</a></li>
                         <li><a class="nav-link scrollto" href="#anggotakami">Anggota Kami</a></li>
                         <li class="dropdown"><a class="nav-link scrollto" href="#jadwalbimbingan"><span>Jadwal</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
@@ -369,6 +370,81 @@
                         </section>
                     </div>
             </section><!-- End Demo/Dokumentasi Penelitian Section -->
+
+            <!-- ======= Berita Section ======= -->
+            <section id="berita" class="details">
+                <div class="container">
+
+                    <div class="section-title">
+                        <h2>Berita</h2>
+                        <p>Berikut Berita Tentang Laboratorium Kami.</p>
+                    </div>
+
+                    @php
+                    $nomor = 1;
+                    @endphp
+                    @foreach($beritaterbaru as $data)
+                    <div class="row content">
+                        @if($nomor % 2 == 1)
+                        <div class="col-md-6" data-aos="fade-right">
+                            @else
+                            <div class="col-md-6 order-1 order-md-2" data-aos="fade-left">
+                                @endif
+                                <img src="{{ asset('storage/'.$data->foto_beritas)}}" class="img-fluid img-thumbnail" alt="">
+                            </div>
+                            <div class="col-md-6 pt-4" data-aos="fade-up">
+                                <h3>{{ $data->judul_beritas }}</h3>
+                                <p><i class="bi bi-calendar-date"></i> {{ $data->tanggal_beritas }}</p>
+                                <p><i class="bi bi-card-heading"></i> {{ $data->isi_beritas }}</p>
+                            </div>
+                        </div>
+
+                        @php
+                        $nomor++;
+                        @endphp
+                        @endforeach
+
+                        <section class="faq section-bg mt-5">
+                            <div class="container" data-aos="fade-up">
+                                <div class="accordion-list">
+                                    <ul>
+                                        <li data-aos="fade-up" data-aos-delay="100">
+                                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Lihat Berita Kami Selengkapnya. <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                            <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                                <section class="details">
+                                                    <div class="container">
+                                                        @php
+                                                        $nomor = 1;
+                                                        @endphp
+                                                        @foreach($berita as $data)
+                                                        <div class="row content">
+                                                            @if($nomor % 2 == 1)
+                                                            <div class="col-md-6" data-aos="fade-right">
+                                                                @else
+                                                                <div class="col-md-6 order-1 order-md-2" data-aos="fade-left">
+                                                                    @endif
+                                                                    <img src="{{ asset('storage/'.$data->foto_beritas)}}" class="img-fluid img-thumbnail" alt="">
+                                                                </div>
+                                                                <div class="col-md-6 pt-4" data-aos="fade-up">
+                                                                    <h3>{{ $data->judul_beritas }}</h3>
+                                                                    <p><i class="bi bi-calendar-date"></i> {{ $data->tanggal_beritas }}</p>
+                                                                    <p><i class="bi bi-card-heading"></i> {{ $data->isi_beritas }}</p>
+                                                                </div>
+                                                            </div>
+                                                            @php
+                                                            $nomor++;
+                                                            @endphp
+                                                            @endforeach
+                                                        </div>
+                                                </section>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            </section><!-- End Berita Section -->
 
             <!-- ======= Anggota Kami Section ======= -->
             <section id="anggotakami" class="testimonials section-bg">
