@@ -4,7 +4,7 @@
             <div class="flex-shrink-0 flex items-center">
                 <a href="{{ route('dashboard') }}">
                     <div class="mb-4 mt-4">
-                        <img src="assets/img/logologin.png" class="h-20 w-20 rounded-full object-cover">
+                        <img src="{{ url('assets/img/logologin.png') }}" class="h-20 w-20 rounded-full object-cover">
                     </div>
                 </a>
             </div>
