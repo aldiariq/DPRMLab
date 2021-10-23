@@ -32,7 +32,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="ket_demo_dokumentasi_penelitian" class="block text-gray-700 text-sm font-bold mb-2">Keterangan :</label>
-                            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="ket_demo_dokumentasi_penelitian" wire:model="ket_demo_dokumentasi_penelitian">
+                            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="ket_demo_dokumentasi_penelitian" wire:model="ket_demo_dokumentasi_penelitian"></textarea>
                             @error('ket_demo_dokumentasi_penelitian') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
                         <div class="mb-4">

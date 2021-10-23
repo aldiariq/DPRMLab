@@ -94,7 +94,7 @@
                     </x-jet-dropdown>
                 </div>
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hisdden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('saranmasukan') }}" :active="request()->routeIs('saranmasukan')">
                         {{ __('Saran atau Masukan') }}
                     </x-jet-nav-link>

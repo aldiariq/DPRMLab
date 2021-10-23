@@ -8,7 +8,7 @@
   @foreach($laboratorium as $data)
   <title>{{ $data->nama_laboratoriums }} Website</title>
   <!-- Favicons -->
-  <link href="{{ asset('storage/'.$data->logo_laboratoriums)}}" rel="icon">
+  <link href="{{ asset('storage/'.$data->logo_laboratoriums)}}" rel="icon" type="image/x-icon">
   @endforeach
   <meta content="" name="description">
   <meta content="" name="keywords">
