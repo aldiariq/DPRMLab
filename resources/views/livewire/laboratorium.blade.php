@@ -63,89 +63,90 @@
                     </div>
 
                     <div class="mt-5 md:mt-0 md:col-span-2">
-                        <div class="px-4 py-5 bg-white sm:p-6 shadow sm:rounded-tl-md sm:rounded-tr-md">
-                            @foreach($laboratorium as $data)
-                            <div class="flex flex-row space-x-10">
-                                <div>
-                                    <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 sm:col-span-4">
-                                        <label class="block font-medium text-sm text-gray-700" for="photo">
-                                            Logo
-                                        </label>
-                                        <div class="mt-2" x-show="! photoPreview">
-                                            <img src="{{ asset('storage/'.$data->logo_laboratoriums)}}" alt="Logo Laboratorium" class="rounded-full h-64 w-64 object-cover">
+                        <div class="w-full lg:w-6/6 px-2">
+                            <div class="px-4 py-5 bg-white sm:p-6 shadow sm:rounded-tl-md sm:rounded-tr-md">
+                                @foreach($laboratorium as $data)
+                                <div class="grid grid-cols-6 gap-6 mt-8">
+                                    <div class="col-span-3 sm:col-span-3">
+                                        <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 sm:col-span-4">
+                                            <label class="block font-medium text-sm text-gray-700" for="photo">
+                                                Logo
+                                            </label>
+                                            <div class="mt-2" x-show="! photoPreview">
+                                                <img src="{{ asset('storage/'.$data->logo_laboratoriums)}}" alt="Logo Laboratorium" class="rounded-full h-64 w-64 object-cover">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 sm:col-span-4">
-                                        <label class="block font-medium text-sm text-gray-700" for="photo">
-                                            Foto
-                                        </label>
-                                        <div class="mt-2" x-show="! photoPreview">
-                                            <img src="{{ asset('storage/'.$data->foto_laboratoriums)}}" alt="Foto Laboratorium" class="rounded-full h-64 w-64 object-cover">
+                                    <div class="col-span-3 sm:col-span-3">
+                                        <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 sm:col-span-4">
+                                            <label class="block font-medium text-sm text-gray-700" for="photo">
+                                                Foto
+                                            </label>
+                                            <div class="mt-2" x-show="! photoPreview">
+                                                <img src="{{ asset('storage/'.$data->foto_laboratoriums)}}" alt="Foto Laboratorium" class="rounded-full h-64 w-64 object-cover">
+                                            </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-span-6 sm:col-span-6">
+                                        <label class="block font-medium text-sm text-gray-700" for="nama_laboratorium_show">
+                                            Nama
+                                        </label>
+                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama_laboratorium_show" value="{{ $data->nama_laboratoriums }}" type="text" disabled>
+                                    </div>
+
+                                    <div class="col-span-6 sm:col-span-6">
+                                        <label class="block font-medium text-sm text-gray-700" for="penjelasan_laboratorium_show">
+                                            Penjelasan
+                                        </label>
+                                        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="penjelasan_laboratorium_show" disabled>{{ $data->penjelasan_laboratoriums }}</textarea>
+                                    </div>
+
+                                    <div class="col-span-6 sm:col-span-6">
+                                        <label class="block font-medium text-sm text-gray-700" for="instagram_laboratorium_show">
+                                            Instagram
+                                        </label>
+                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="instagram_laboratorium_show" type="text" value="{{ $data->instagram_laboratoriums }}" disabled>
+                                    </div>
+
+                                    <div class="col-span-6 sm:col-span-6">
+                                        <label class="block font-medium text-sm text-gray-700" for="youtube_laboratorium_show">
+                                            Youtube
+                                        </label>
+                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="youtube_laboratorium_show" type="text" value="{{ $data->youtube_laboratoriums }}" disabled>
+                                    </div>
+
+                                    <div class="col-span-6 sm:col-span-6">
+                                        <label class="block font-medium text-sm text-gray-700" for="github_laboratorium_show">
+                                            Github
+                                        </label>
+                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="github_laboratorium_show" type="text" value="{{ $data->github_laboratoriums }}" disabled>
+                                    </div>
+
+                                    <div class="col-span-6 sm:col-span-6">
+                                        <label class="block font-medium text-sm text-gray-700" for="email_laboratorium_show">
+                                            Email
+                                        </label>
+                                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email_laboratorium_show" type="text" value="{{ $data->email_laboratoriums }}" disabled>
+                                    </div>
+
+                                    <div class="col-span-6 sm:col-span-6">
+                                        <label class="block font-medium text-sm text-gray-700" for="warnatajuk_laboratorium_show">
+                                            Warna Tajuk
+                                        </label>
+                                        <input class="shadow appearance-none border rounded focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" id="warnatajuk_laboratorium_show" type="color" value="{{ $data->warnatajuk_laboratoriums }}" disabled>
+                                    </div>
                                 </div>
+                                @endforeach
                             </div>
-                            <div class="grid grid-cols-6 gap-6 mt-8">
-                                <div class="col-span-6 sm:col-span-4">
-                                    <label class="block font-medium text-sm text-gray-700" for="nama_laboratorium_show">
-                                        Nama
-                                    </label>
-                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama_laboratorium_show" value="{{ $data->nama_laboratoriums }}" type="text" disabled>
-                                </div>
 
-                                <div class="col-span-6 sm:col-span-4">
-                                    <label class="block font-medium text-sm text-gray-700" for="penjelasan_laboratorium_show">
-                                        Penjelasan
-                                    </label>
-                                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="penjelasan_laboratorium_show" disabled>{{ $data->penjelasan_laboratoriums }}</textarea>
-                                </div>
-
-                                <div class="col-span-6 sm:col-span-4">
-                                    <label class="block font-medium text-sm text-gray-700" for="instagram_laboratorium_show">
-                                        Instagram
-                                    </label>
-                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="instagram_laboratorium_show" type="text" value="{{ $data->instagram_laboratoriums }}" disabled>
-                                </div>
-
-                                <div class="col-span-6 sm:col-span-4">
-                                    <label class="block font-medium text-sm text-gray-700" for="youtube_laboratorium_show">
-                                        Youtube
-                                    </label>
-                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="youtube_laboratorium_show" type="text" value="{{ $data->youtube_laboratoriums }}" disabled>
-                                </div>
-
-                                <div class="col-span-6 sm:col-span-4">
-                                    <label class="block font-medium text-sm text-gray-700" for="github_laboratorium_show">
-                                        Github
-                                    </label>
-                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="github_laboratorium_show" type="text" value="{{ $data->github_laboratoriums }}" disabled>
-                                </div>
-
-                                <div class="col-span-6 sm:col-span-4">
-                                    <label class="block font-medium text-sm text-gray-700" for="email_laboratorium_show">
-                                        Email
-                                    </label>
-                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email_laboratorium_show" type="text" value="{{ $data->email_laboratoriums }}" disabled>
-                                </div>
-
-                                <div class="col-span-6 sm:col-span-4">
-                                    <label class="block font-medium text-sm text-gray-700" for="warnatajuk_laboratorium_show">
-                                        Warna Tajuk
-                                    </label>
-                                    <input class="shadow appearance-none border rounded focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm mt-1 block w-full" id="warnatajuk_laboratorium_show" type="color" value="{{ $data->warnatajuk_laboratoriums }}" disabled>
-                                </div>
+                            <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6 shadow sm:rounded-bl-md sm:rounded-br-md">
+                                <button wire:click="editLaboratorium({{ $data->id_laboratoriums }})" class="w-full h-10 px-6 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
+                                    <h2 class="font-semibold text-sm text-white-800 leading-tight">
+                                        {{ __('Ubah Informasi Laboratorium') }}
+                                    </h2>
+                                </button>
                             </div>
-                            @endforeach
-                        </div>
-
-                        <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6 shadow sm:rounded-bl-md sm:rounded-br-md">
-                            <button wire:click="editLaboratorium({{ $data->id_laboratoriums }})" class="w-full h-10 px-6 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
-                                <h2 class="font-semibold text-sm text-white-800 leading-tight">
-                                    {{ __('Ubah Informasi Laboratorium') }}
-                                </h2>
-                            </button>
                         </div>
                     </div>
                 </div>
